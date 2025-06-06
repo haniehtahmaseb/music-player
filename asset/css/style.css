@@ -1,0 +1,760 @@
+        :root {
+            --primary-color: #5a5095;
+            --primaryop-color: #5a5095;
+            --second-color: #8c85bd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-transform: capitalize;
+            padding: 0 0 20px 20px;
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+        }
+
+        @keyframes rotate {
+            to {
+                rotate: 360deg;
+            }
+        }
+
+        .spinner {
+            animation: rotate 50s linear infinite;
+        }
+
+        body {
+            width: 100%;
+            font-family: "Nunito", sans-serif;
+            color: white;
+            background-image: url(./../img/295197561-aa462558-0106-4268-9864-d34a4f35531f.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+                margin: 10px;
+                background-color: var(--second-color);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--primary-color);
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                border: 2px solid var(--primaryop-color);
+                box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                margin: 2px;
+
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+                height: 0;
+                width: 0;
+            }
+
+            >main {
+                width: 95%;
+                border: 3px solid rgba(255, 255, 255, 0.2);
+                border-radius: 20px;
+                backdrop-filter: blur(50px);
+                background-color: rgba(255, 255, 255, 0.103);
+                margin-block: 3%;
+
+                >.row {
+                    width: 100%;
+
+                    >div {
+
+                        &:first-of-type {
+                            width: 5%;
+                            display: flex;
+                            align-content: space-evenly;
+
+
+                            >header {
+                                align-content: space-evenly;
+
+                                >* {
+                                    width: 100%;
+                                }
+
+                                >figure {
+                                    justify-content: center;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 15px;
+
+
+                                    >img {
+                                        width: 80%;
+                                        height: 65%;
+                                        object-fit: cover;
+                                        border-radius: 61% 39% 64% 36% / 56% 53% 47% 44%;
+                                    }
+
+                                    >figcaption {
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        font-family: "Nunito", sans-serif;
+                                        text-align: center;
+                                    }
+                                }
+
+                                >.menu {
+                                    width: 100%;
+                                    height: 75%;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    align-content: space-between;
+
+                                    >ul {
+                                        flex-wrap: wrap;
+                                        width: 100%;
+
+                                        >li {
+                                            list-style-type: none;
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            padding-bottom: 5px;
+
+                                            >a {
+                                                text-decoration: none;
+                                                font-size: 25px;
+
+                                                >span {
+                                                    color: white;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            width: 65%;
+                            border-right: 1px solid rgba(255, 255, 255, 0.2);
+                            border-left: 1px solid rgba(255, 255, 255, 0.2);
+
+
+                            >.slider {
+                                width: 100%;
+                                position: relative;
+
+                                >swiper-container {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 300px;
+                                    gap: 20px;
+
+                                    >swiper-slide {
+                                        width: 600px;
+                                        height: 100%;
+                                        flex: 0 0 auto;
+                                        border: 2px solid rgba(255, 255, 255, 0.2);
+                                        border-radius: 20px;
+                                        overflow: hidden;
+                                        position: relative;
+
+                                        >img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+
+                                        >div {
+                                            width: 100%;
+                                            position: absolute;
+                                            padding: 0 0 5% 5%;
+                                            bottom: 0;
+                                            left: 0;
+
+                                            >h3 {
+                                                font-size: 30px;
+                                                text-transform: capitalize;
+                                                margin-bottom: 20px;
+                                            }
+
+                                            >span {
+                                                display: flex;
+                                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                                padding: 8px;
+                                                border-radius: 10px;
+                                                background-color: rgba(255, 255, 255, 0.2);
+                                                width: 30%;
+                                                gap: 10px;
+                                                justify-content: center;
+                                                transition: 0.4s;
+
+                                                >* {
+                                                    transition: inherit;
+                                                }
+
+                                                >span {
+                                                    text-transform: uppercase;
+                                                }
+
+                                                >i {
+                                                    display: flex;
+                                                    align-items: center;
+                                                }
+
+                                                &:hover {
+                                                    background-color: white;
+
+                                                    >* {
+                                                        color: black;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            >.singer {
+                                width: 100%;
+                                overflow-x: scroll;
+                                padding-block: 50px;
+
+                                &::-webkit-scrollbar {
+                                    width: 10px;
+                                    height: 10px;
+                                    margin: 10px;
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: var(--primary-color);
+                                    border-radius: 10px;
+                                }
+
+                                &::-webkit-scrollbar-track {
+                                    background-color: transparent;
+                                    border: 2px solid #5a5095a1;
+                                    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+                                    border-radius: 10px;
+                                    margin: 2px;
+
+                                }
+
+                                &::-webkit-scrollbar-button {
+                                    display: none;
+                                    height: 0;
+                                    width: 0;
+                                }
+
+                                >div {
+                                    width: 100%;
+                                    display: flex;
+                                    gap: 20px;
+                                    flex-wrap: nowrap;
+                                    padding: 30px;
+
+                                    >figure {
+                                        width: 150px;
+                                        flex: 0 0 auto;
+                                        border-radius: 50%;
+                                        position: relative;
+                                        border: 2px solid #5a5095a1;
+                                        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+                                        transition: 0.4s;
+                                        cursor: pointer;
+                                        display: flex;
+
+                                        &:hover {
+                                            border: 5px solid #5a5095a1;
+
+                                            >img {
+                                                scale: 0.99;
+                                            }
+
+                                        }
+
+                                        >img {
+                                            width: 100%;
+                                            object-fit: cover;
+                                            border-radius: inherit;
+                                            transition: inherit;
+                                        }
+
+                                        >figcaption {
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 0;
+                                            width: 100%;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            margin-top: 10px;
+
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            >.song {
+                                width: 100%;
+                                overflow-x: scroll;
+                                padding-block: 50px;
+
+                                &::-webkit-scrollbar {
+                                    width: 10px;
+                                    height: 10px;
+                                    margin: 10px;
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: var(--primary-color);
+                                    border-radius: 10px;
+                                }
+
+                                &::-webkit-scrollbar-track {
+                                    background-color: transparent;
+                                    border: 2px solid #5a5095a1;
+                                    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+                                    border-radius: 10px;
+                                    margin: 2px;
+
+                                }
+
+                                &::-webkit-scrollbar-button {
+                                    display: none;
+                                    height: 0;
+                                    width: 0;
+                                }
+
+                                >div {
+                                    width: 100%;
+                                    display: flex;
+                                    gap: 20px;
+                                    flex-wrap: nowrap;
+                                    padding: 30px;
+
+                                    >.box {
+                                        >figure {
+                                            width: 200px;
+                                            height: 200px;
+                                            flex: 0 0 auto;
+                                            border-radius: 10px;
+                                            border: 2px solid #5a5095a1;
+                                            box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+                                            transition: 0.8s;
+                                            cursor: pointer;
+                                            display: flex;
+                                            overflow: hidden;
+
+                                            &:hover {
+                                                >img {
+                                                    scale: 1.1;
+                                                    rotate: -5deg;
+                                                }
+
+                                            }
+
+                                            >img {
+                                                width: 100%;
+                                                object-fit: contain;
+                                                border-radius: inherit;
+                                                transition: inherit;
+                                            }
+
+                                        }
+
+                                        >figcaption {
+                                            /* position: absolute;
+                                            top: 100%;
+                                            left: 0; */
+                                            width: 100%;
+                                            margin-top: 10px;
+
+                                            >span {
+                                                text-align: left;
+                                                text-transform: capitalize;
+                                                display: block;
+                                                width: 100%;
+
+                                                &:last-child {
+                                                    color: rgba(255, 255, 255, 0.5);
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-of-type {
+                            width: 30%;
+
+                            >.row {
+                                width: 100%;
+
+                                &:nth-of-type(1) {
+                                    width: 100%;
+                                    display: flex;
+                                    gap: 10px;
+
+                                    >div {
+                                        width: 100%;
+                                        display: flex;
+                                        flex-wrap: nowrap;
+                                        margin-left: 20px;
+
+                                        >figure {
+                                            width: 80px;
+                                            height: 60px;
+                                            flex: 0 0 auto;
+                                            border-radius: 10px;
+                                            border: 2px solid #5a5095;
+                                            box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+                                            transition: 0.8s;
+                                            cursor: pointer;
+                                            display: flex;
+                                            overflow: hidden;
+                                            position: relative;
+
+                                            &::after {
+                                                content: '';
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                background-color: var(--primaryop-color);
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                transition: inherit;
+                                                opacity: 0;
+                                            }
+
+                                            &:hover::after,
+                                            &:hover>i {
+                                                opacity: 100%;
+                                            }
+
+
+                                            >img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                transition: 0.4s;
+                                            }
+
+                                            >i {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                font-size: 40px;
+                                                text-align: center;
+                                                z-index: 5;
+                                                opacity: 0;
+                                                transition: inherit;
+
+                                            }
+                                        }
+
+                                        >figcaption {
+                                            width: calc(100% - 80px);
+                                            display: flex;
+                                            margin-left: 40px;
+                                            justify-content: space-evenly;
+
+                                            >* {
+                                                width: 100%;
+                                                display: flex;
+                                            }
+
+                                            >.row {
+                                                >* {
+                                                    width: 100%;
+                                                }
+
+                                                >span {
+                                                    display: flex;
+                                                    text-transform: capitalize;
+                                                    align-content: center;
+
+                                                    &:last-child {
+                                                        color: rgba(255, 255, 255, 0.5);
+                                                        font-size: 14px;
+                                                    }
+                                                }
+                                            }
+
+                                            >span {
+                                                align-items: center;
+                                                justify-content: end;
+                                                padding-right: 20px;
+                                                color: rgba(255, 255, 255, 0.8);
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                            }
+
+                            >.player {
+                                border: 3px solid rgba(255, 255, 255, 0.2);
+                                border-radius: 20px;
+                                backdrop-filter: blur(50px);
+                                background-color: rgba(255, 255, 255, 0.103);
+                                margin: 40px 20px;
+                                justify-content: center;
+                                width: 90%;
+
+
+
+                                >.playSong {
+                                    justify-content: center;
+                                    margin-block: 30px;
+
+                                    >figure {
+                                        width: 150px;
+                                        height: 150px;
+                                        flex: 0 0 auto;
+                                        border-radius: 50%;
+                                        border: 2px solid #5a5095a1;
+                                        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+                                        transition: 0.8s;
+                                        cursor: pointer;
+                                        display: flex;
+                                        overflow: hidden;
+                                        position: relative;
+
+                                        >span {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            width: 17px;
+                                            height: 17px;
+                                            border-radius: 50%;
+                                            background-color: var(--second-color);
+                                            border: 2px solid rgba(255, 255, 255, 0.5);
+                                            box-shadow: 0px 0px 200px 0px rgba(255, 255, 255);
+                                        }
+
+                                        >img {
+                                            width: 100%;
+                                            object-fit: contain;
+                                            border-radius: inherit;
+                                            transition: inherit;
+                                        }
+
+                                    }
+
+                                    >figcaption {
+                                        width: 100%;
+                                        margin-top: 20px;
+
+                                        >span {
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            display: block;
+                                            width: 100%;
+
+                                            &:last-child {
+                                                color: rgba(255, 255, 255, 0.5);
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                                >.bar {
+                                    width: 70%;
+                                    height: 5px;
+                                    background-color: var(--second-color);
+                                    border-radius: 50px;
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    >#thumb {
+                                        width: 25px;
+                                        height: 25px;
+                                        border-radius: 50%;
+                                        border: 5px solid white;
+                                        background-color: var(--primary-color);
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translateY(-50%);
+                                        box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+                                        position: 0.4s;
+
+                                    }
+
+                                    >#duration,
+                                    #time {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 110%;
+                                        transform: translateY(-50%);
+                                        color: var(--second-color);
+                                        font-size: 12px;
+
+                                    }
+
+                                    >#time {
+                                        left: -15%
+                                    }
+                                }
+
+                                >.row {
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 40px;
+                                    margin-block: 50px;
+
+                                    >span {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background-color: var(--second-color);
+                                        border-radius: 50%;
+                                        width: 40px;
+                                        height: 40px;
+                                        font-size: 35px;
+                                        text-align: center;
+                                        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.7);
+                                        cursor: pointer;
+
+                                        &:nth-of-type(2) {
+                                            width: 60px;
+                                            height: 60px;
+                                        }
+                                    }
+                                }
+
+                                >.row {
+                                    >input[type="range"] {
+                                        appearance: none;
+                                        outline: none;
+                                        cursor: pointer;
+                                        border: none;
+                                        border-radius: 6px;
+                                        width: 150px;
+                                        height: 6px;
+                                        background-color: var(--second-color);
+                                        border-radius: 5px;
+
+
+                                    }
+
+                                    >input[type="range"]::-webkit-slider-thumb {
+                                        appearance: none;
+                                        width: 14px;
+                                        height: 14px;
+                                        border-radius: 50%;
+                                        background-color: #5a5095;
+                                        border: 1px solid white;
+                                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* footer */
+        .animated-footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(to right, #5a5095a1, #8c85bd, #5a5095);
+            color: #fff;
+            text-align: center;
+            padding: 10px 10px;
+            animation: fadeInUp 1s ease forwards;
+            /* border-radius: 64% 36% 70% 30% / 54% 66% 34% 46%; */
+            border-radius: 70% 30% 47% 53% / 66% 67% 33% 34%;
+            transition: 1s;
+            transform-origin: right bottom;
+
+            >.footer-img {
+                width: 100px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                opacity: 0;
+                animation: fadeIn 1.5s ease-out forwards;
+                animation-delay: 0.5s;
+            }
+
+            >.footer-socials {
+                margin-top: 5px;
+
+                >.social-icon {
+                    display: inline-block;
+                    margin: 0 7px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: bold;
+                    transition: transform 0.3s ease, color 0.3s ease;
+                    font-size: 10px;
+
+                    &:hover {
+                        transform: scale(1.5);
+                        color: #9A1D85;
+                    }
+                }
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scale {
+            scale: 0.5;
+        }
+
+        /* footer */
