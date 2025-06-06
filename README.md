@@ -2,6 +2,8 @@
 
 
 - [Demo Project](https://haniehtahmaseb.github.io/scroll/)
+- ![Image](https://github.com/user-attachments/assets/fff6846a-010d-481a-b8eb-bbb0c45ca53b)
+![Image](https://github.com/user-attachments/assets/ec44f591-f3a1-4b2e-9626-8e82a1ceed7c)
 
 - Developed by Hani Tahmaseb
 
